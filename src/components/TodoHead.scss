@@ -1,0 +1,30 @@
+@import '../ColorList.scss';
+
+.TodoHead {
+    padding: {
+        top: 48px;
+        left: 32px;
+        right: 32px;
+        bottom: 24px;
+    }
+    border: {
+        bottom: 1px solid $gray2;
+    }
+
+    h1 {
+        margin: 0;
+        font-size: 2rem;
+        color: $gray8;
+    }
+    .day {
+        margin-top: 4px;
+        color: $gray6;
+        font-size: 1.5rem;
+    }
+    .tasks-left {
+        color: $teal5;
+        font-size: 1.2rem;
+        margin-top: 40px;
+        font-weight: bold;
+    }
+}
