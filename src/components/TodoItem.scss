@@ -1,0 +1,57 @@
+@import '../ColorList.scss';
+
+.TodoItem {
+    display: flex;
+    align-items: center;
+    padding: {
+        top: 12px;
+        bottom: 12px;
+    }
+
+    &:hover {
+        .Remove{
+            display: initial;
+        }
+    }
+}
+
+.Remove {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $gray3;
+    font-size: 1.5rem;
+    cursor: pointer;
+
+    &:hover {
+        color: $red5
+    }
+    display: none;
+}
+
+.CheckCircle {
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    border: 1px solid $gray4;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    cursor: pointer;
+
+    &.done {
+        border: 1px solid $teal4;
+        color: $teal4;
+    }
+}
+
+.Text {
+    flex: 1;
+    font-size: 1.3rem;
+    color: $gray7;
+    &.done {
+        color: $gray4;
+    }
+}
