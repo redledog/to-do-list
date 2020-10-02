@@ -66,7 +66,7 @@ export function TodoProvider({ children }) {
 
 // 다른곳에서 useContext 를 사용하지 않고 다른 곳에서 사용할 수 있게
 // Custom Hook 두개 생성
-export function useTodoSate() {
+export function useTodoState() {
     const context = useContext(TodoStateContext);
     if(!context) {
         throw new Error('Cannot find TodoProvider');
