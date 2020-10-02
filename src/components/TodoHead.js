@@ -2,7 +2,12 @@
 import React from 'react';
 import './TodoHead.scss';
 
+import { useTodoState } from '../TodoContext';
+
 function TodoHead() {
+    const todos = useTodoState();
+    console.log(todos); // 정상 출력 테스트용
+
     return (
         <div className="TodoHead">
             <h1>9999년 9월 99일</h1>
