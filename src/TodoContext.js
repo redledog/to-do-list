@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react';
+import React, { useReducer, createContext } from 'react';
 
 const initialTodos = [
     {
@@ -38,7 +38,17 @@ function todoReducer(state, action) {
     }
 }
 
+// state 와 dispatch 를 사용할 수 있는 각각의 Context를 만들어줌
+const TodoStateContext = createContext();
+const TodoDispatchContext = createContext();
+
 export function TodoProvider({ children }) {
     const [state, dispatch] = useReducer(todoReducer, initialTodos);
-    return children;
+    return (
+        <TodoStateContext.Provider value={state}>
+            <TodoDispatchContext value={dispatch}>
+                {children}
+            </TodoDispatchContext>
+        </TodoStateContext.Provider>
+    );
 }
